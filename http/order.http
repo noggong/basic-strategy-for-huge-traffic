@@ -1,0 +1,5 @@
+### 간단한 API
+GET localhost:3000/simple-api
+
+### 느린 작업 API
+GET localhost:3000/heavy-api
