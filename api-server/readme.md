@@ -46,3 +46,11 @@ artillery run ../artillery/api-test.yml -o ../artillery/expiry-cache/result.json
 ```bash
 artillery report ../artillery/expiry-cache/result.json
 ```
+
+## case5 : 외부에서 캐시 갱신
+```bash
+artillery run ../artillery/api-test.yml -o ../artillery/external-refresh-cache/result.json
+```
+```bash
+artillery report ../artillery/external-refresh-cache/result.json
+```

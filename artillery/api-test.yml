@@ -5,7 +5,7 @@ config:
     # 부하테스트 시간 (초)
     - duration: 30
     # 부하테스트 동안의 사용자 수 (초당 요청 수)
-      arrivalRate: 30
+      arrivalRate: 10
       name: api-request-test
 # 부하 테스트 시나리오
 scenarios:
