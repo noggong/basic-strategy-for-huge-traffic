@@ -34,10 +34,13 @@ async function heavyProcess() {
 
     const result = new Promise((resolve, reject) => {
         setTimeout(() => {
-            redisConnect.set("heavy", heavyResult)
+            redisConnect.set("heavy", heavyResult, {
+                EX: 3,
+                NX: true,
+            })
             console.log("No Cache")
             resolve(heavyResult)
-        }, 2000)
+        }, 100)
     })
 
     return result

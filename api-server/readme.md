@@ -23,7 +23,7 @@ artillery run ../artillery/api-test.yml -o ../artillery/no-cache/result.json
 artillery report ../artillery/no-cache/result.json
 ```
 
-## case2 : 유효기간 없는 캐시 적용 후 부하테스트
+## case2 : TTL 없는 캐시 적용 후 부하테스트
 ```bash
 artillery run ../artillery/api-test.yml -o ../artillery/no-expiry-cache/result.json
 ```
@@ -31,10 +31,18 @@ artillery run ../artillery/api-test.yml -o ../artillery/no-expiry-cache/result.j
 artillery report ../artillery/no-expiry-cache/result.json
 ```
 
-## case2 : 유효기간 없는 캐시 적용 후 캐시 갱신되어야 하는 값 테스트
+## case3 : TTL 없는 캐시 적용 후 캐시 갱신되어야 하는 값 테스트
 ```bash
 artillery run ../artillery/api-test.yml -o ../artillery/no-expiry-error-cache/result.json
 ```
 ```bash
 artillery report ../artillery/no-expiry-error-cache/result.json
+```
+
+## case4 : TTL 설정 캐시 적용 후 캐시 갱신되어야 하는 값 테스트
+```bash
+artillery run ../artillery/api-test.yml -o ../artillery/expiry-cache/result.json
+```
+```bash
+artillery report ../artillery/expiry-cache/result.json
 ```
