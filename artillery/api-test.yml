@@ -6,13 +6,11 @@ config:
     - duration: 30
     # 부하테스트 동안의 사용자 수 (초당 요청 수)
       arrivalRate: 30
-      name: Warm up
+      name: api-request-test
 # 부하 테스트 시나리오
 scenarios:
   # 시나리오 정의
   - name: "just get hash"
     flow:
-      - get:
-          url: "/simple-api"
       - get:
           url: "/heavy-api"
