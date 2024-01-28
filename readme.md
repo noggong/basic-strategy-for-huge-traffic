@@ -122,6 +122,8 @@ zrangebyscore [key] [min] [max]
 - API 서버는 stateless
 - RDBMS vs NoSQL
 - 데이터를 분리 저장할때는 전략이 필요하다.
+  - 노드 증가, 축소에 의한 데이터 이동
+  - 데이터를 찾아가는 방법..등등
 - auto increment, UUID (Universally Unique Identifier), GUID (globally unique identifier)
   - 파티셔닝 - 수직, 수평 파티셔 
   - 데이터의 식별값은 유일 해야한다.
