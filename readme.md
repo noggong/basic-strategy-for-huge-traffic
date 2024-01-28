@@ -113,3 +113,17 @@ zrangebyscore [key] [min] [max]
 > Redis 는 많은 자료구조를 제공하며, replication 을 통해 더 안정적인 서비스를 제공한다, 또한 Cluster 모드를 제공한다.
 > Memcached 는 단순한 key-value store 이다. 또한, slab Allocator 를 이용해 chunk 관리를 통해 Redis 보다 더 빠른 응답속도를 제공한다. (쉬운말로 메모리 파편화관리에 유리하다.)
 
+## 화장실 청소는 한시간에 한번 깨끗히 한다. a.k.a 스케쥴 배치
+- 음식점에 오는 손님들이 화장실을 사용할때마다 화장실 청소를 한다면??
+- 주방장이 주기마다 화장실 청소를 하러 간다면??
+
+## 가게의 규모가 커져서 프렌차이즈를 내고 재료들을 저장 하는 창고가 필요하다면? a.k.a DB
+- stateful 한 데이터를 저장하는 곳
+- API 서버는 stateless
+- RDBMS vs NoSQL
+- 데이터를 분리 저장할때는 전략이 필요하다.
+- auto increment, UUID (Universally Unique Identifier), GUID (globally unique identifier)
+  - 파티셔닝 - 수직, 수평 파티셔 
+  - 데이터의 식별값은 유일 해야한다.
+  - 데이터의 이동이 자유로워야 한다.
+- 
